@@ -1,0 +1,46 @@
+.feature-box{
+
+	background-color: rgba($color-white, .8);
+	font-size: 1.5rem;
+	padding: 2.5rem;
+	text-align: center;
+	border-radius: .3rem;
+	box-shadow: $color-shadow-img;
+	transition: all .3s;
+	ms-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+
+	@include respond(tab-port){
+
+		padding: 2rem;
+	}
+
+	&__icon{
+
+		font-size: 6rem;
+		margin-bottom: .5rem;
+		background-image: $color-linear-gradient;
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		display: inline-block;
+
+		@include respond(tab-port){
+
+		margin-bottom: 0;
+	}
+
+	}
+
+	&:hover{
+
+		// transform: translateY(-1rem) scale(1.01);
+		box-shadow: $color-shadow-img-hover;
+
+		@supports (transform: translateY(-1rem) scale(1.01)){
+
+			transform: translateY(-1rem) scale(1.01)
+		}
+}
+}
